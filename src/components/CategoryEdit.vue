@@ -113,8 +113,8 @@ export default {
     }
   },
   mounted () {
-    M.updateTextFields()
     this.select = M.FormSelect.init(this.$refs.select)
+    M.updateTextFields()
   },
   destroyed () {
     if(this.select && this.select.destroy){
