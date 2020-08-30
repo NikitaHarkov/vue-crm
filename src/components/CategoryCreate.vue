@@ -49,7 +49,6 @@
 
 <script>
 import { required, minValue } from 'vuelidate/lib/validators'
-import category from '@/store/category'
 
 export default {
   data: () => ({
