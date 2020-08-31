@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>История записей</h3>
+      <h3>{{ 'HistoryRecords' | localize }}</h3>
     </div>
 
     <div class="history-chart">
@@ -10,8 +10,8 @@
 
     <Loader v-if="loading"/>
 
-    <p class="center" v-else-if="!records.length">There is now records.
-      <router-link to="/record">Add new record</router-link>
+    <p class="center" v-else-if="!records.length">{{ "NoRecords" | localize }}
+      <router-link to="/record">{{'NewRecord' | localize}}</router-link>
     </p>
 
     <section v-else>
@@ -20,8 +20,8 @@
         v-model="page"
         :page-count="pageCount"
         :click-handler="pageChangeHandler"
-        :prev-text="'Prev'"
-        :next-text="'Next'"
+        :prev-text="'Prev'|localize"
+        :next-text="'Next'|localize"
         :container-class="'pagination'"
         :page-class="'waves-effect'"
       />

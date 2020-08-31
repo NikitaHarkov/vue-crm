@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>Счет</h3>
+      <h3>{{ 'Bill' | localize }}</h3>
 
       <button class="btn waves-effect waves-light btn-small" v-on:click="refresh">
         <i class="material-icons">refresh</i>

@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="page-title">
-      <h3>Новая запись</h3>
+      <h3>{{'Menu_Record' | localize}}</h3>
     </div>
 
     <Loader v-if="loading"/>
 
-    <p class="center" v-else-if="!categories.length">There is now categories.
-      <router-link to="/categories">Add new category</router-link>
+    <p class="center" v-else-if="!categories.length">{{'NoCategory' | localize}}
+      <router-link to="/categories">{{'AddCategory' | localize}}</router-link>
     </p>
 
     <form class="form" v-else @submit.prevent="onSubmit">
@@ -20,7 +20,7 @@
           >{{ c.title }}
           </option>
         </select>
-        <label>Выберите категорию</label>
+        <label>{{ 'ChooseCategory' | localize }}</label>
       </div>
 
       <p>
@@ -32,7 +32,7 @@
             value="income"
             v-model="type"
           />
-          <span>Доход</span>
+          <span>{{ 'Income' | localize }}</span>
         </label>
       </p>
 
@@ -45,7 +45,7 @@
             value="outcome"
             v-model="type"
           />
-          <span>Расход</span>
+          <span>{{ 'Outcome' | localize }}</span>
         </label>
       </p>
 
@@ -56,7 +56,7 @@
           v-model.number="amount"
           :class="{invalid: $v.amount.$dirty && !$v.amount.minValue}"
         >
-        <label for="amount">Сумма</label>
+        <label for="amount">{{ 'Summ' | localize }}</label>
         <span
           class="helper-text invalid"
           v-if="$v.amount.$dirty && !$v.amount.minValue"
@@ -70,7 +70,7 @@
           v-model="description"
           :class="{invalid: $v.description.$dirty && !$v.description.required}"
         >
-        <label for="description">Описание</label>
+        <label for="description">{{ 'Description' | localize }}</label>
         <span
           class="helper-text invalid"
           v-if="$v.description.$dirty && !$v.description.required"
@@ -78,7 +78,7 @@
       </div>
 
       <button class="btn waves-effect waves-light" type="submit">
-        Создать
+        {{'Create' | localize}}
         <i class="material-icons right">send</i>
       </button>
     </form>
