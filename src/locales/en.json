@@ -7,6 +7,7 @@
   "Menu_History": "History",
   "Menu_Planning": "Planning",
   "Menu_Record": "New Record",
+  "Record": "Record",
   "Menu_Category": "Categories",
   "Navbar_Profile": "Profile",
   "Navbar_Exit": "Exit",
@@ -38,5 +39,14 @@
   "Create": "Create",
   "Title": "Title",
   "Limit": "Limit",
-  "Edit": "Edit"
+  "Edit": "Edit",
+  "Login": "Login",
+  "Register": "Registration",
+  "HomeBookkeeping": "Home Bookkeeping",
+  "Password": "Password",
+  "Registration": "Sign up",
+  "SignIn": "Sign In",
+  "NoAccount": "Don't have account?",
+  "HaveAccount": "Already have account?",
+  "Agreement": "Agree with rules"
 }

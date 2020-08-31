@@ -36,6 +36,11 @@ import HistoryChart from '@/components/HistoryChart'
 
 export default {
   name: 'history',
+  metaInfo() {
+    return {
+      title: this.$title('Menu_History')
+    }
+  },
   mixins: [paginationMixin],
   data: () => ({
     loading: true,

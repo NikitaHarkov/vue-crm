@@ -1,7 +1,7 @@
 <template>
   <form class="card auth-card" @submit.prevent="onSubmit">
     <div class="card-content">
-      <span class="card-title">Домашняя бухгалтерия</span>
+      <span class="card-title">{{ 'HomeBookkeeping' | localize }}</span>
       <div class="input-field">
         <input
           id="email"
@@ -27,7 +27,7 @@
           v-model.trim="password"
           :class="{invalid: ($v.password.$dirty && !$v.password.required) || ($v.password.$dirty && !$v.password.minLength)}"
         >
-        <label for="password">Пароль</label>
+        <label for="password">{{ 'Password' | localize }}</label>
         <small
           class="helper-text invalid"
           v-if="$v.password.$dirty && !$v.password.required"
@@ -44,14 +44,14 @@
           class="btn waves-effect waves-light auth-submit"
           type="submit"
         >
-          Войти
+          {{ 'SignIn' | localize }}
           <i class="material-icons right">send</i>
         </button>
       </div>
 
       <p class="center">
-        Нет аккаунта?
-        <router-link to="/register">Зарегистрироваться</router-link>
+        {{'NoAccount' | localize}}
+        <router-link to="/register">{{ 'Registration' | localize }}</router-link>
       </p>
     </div>
   </form>
@@ -63,6 +63,11 @@ import messages from '@/utils/messages'
 
 export default{
   name: 'login',
+  metaInfo() {
+    return {
+      title: this.$title('Login')
+    }
+  },
   data: () => ({
     email: '',
     password: ''

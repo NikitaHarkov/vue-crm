@@ -9,6 +9,7 @@
   "Menu_Record": "Новая запись",
   "Menu_Category": "Категория",
   "Navbar_Profile": "Профиль",
+  "Record": "Запись",
   "Navbar_Exit": "Выйти",
   "Bill": "Счет",
   "CurrencyAmount": "Счет в валюте",
@@ -37,5 +38,14 @@
   "Create": "Создать",
   "Title": "Название",
   "Limit": "Лимит",
-  "Edit": "Редактировать"
+  "Edit": "Редактировать",
+  "Login": "Вход",
+  "Register": "Регистрация",
+  "HomeBookkeeping": "Домашняя бугхалтерия",
+  "Password": "Пароль",
+  "Registration": "Зарегистрироваться",
+  "SignIn": "Вход",
+  "NoAccount": "Нет Аккаунта?",
+  "HaveAccount": "Уже есть акаунт?",
+  "Agreement": "С правилами согласен"
 }

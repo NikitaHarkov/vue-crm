@@ -42,6 +42,11 @@ import { mapGetters, mapActions } from 'vuex'
 import { required } from 'vuelidate/lib/validators'
 
 export default {
+  metaInfo() {
+    return {
+      title: this.$title('Navbar_Profile')
+    }
+  },
   data: () => ({
     name: '',
     isRuLocale: true
