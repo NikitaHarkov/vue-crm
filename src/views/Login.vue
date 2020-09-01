@@ -49,6 +49,16 @@
         </button>
       </div>
 
+      <form @submit.prevent="demoLogin">
+        <button
+          class="btn waves-effect waves-light auth-submit"
+          type="submit"
+        >
+          {{ 'DemoAccount' | localize }}
+          <i class="material-icons right">send</i>
+        </button>
+      </form>
+
       <p class="center">
         {{'NoAccount' | localize}}
         <router-link to="/register">{{ 'Registration' | localize }}</router-link>
@@ -97,6 +107,16 @@ export default{
         await this.$router.push('/')
       }catch (e){}
 
+    },
+    async demoLogin (){
+      const formData = {
+        email: 'n@gmail.com',
+        password: '123456'
+      }
+      try{
+        await this.$store.dispatch('login', formData)
+        await this.$router.push('/')
+      }catch (e){}
     }
   }
 }

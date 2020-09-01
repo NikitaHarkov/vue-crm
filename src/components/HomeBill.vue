@@ -29,6 +29,9 @@ export default {
   },
   methods: {
     getCurrency (currency) {
+      if (currency === 'EUR'){
+        return this.base
+      }
       const number = this.base * this.rates[currency]
       return Math.round((number + Number.EPSILON) * 100) / 100
     }
