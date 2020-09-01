@@ -15,5 +15,6 @@ npm run serve
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Preview
+Watch deployed app online on
+[Firebase](https://vue-crm-starter.web.app).
